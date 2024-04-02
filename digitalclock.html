@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital clock</title>
+    <style>
+        h1{
+            background-color: rgb(136, 0, 255);
+            color: #fff;
+            margin-left: 30%;
+            margin-right: 30%;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+    </style>
+    <script>
+       
+        setInterval(()=>{printClock()},1000);
+
+        printClock=()=>{
+            let d  = new Date();
+            let val = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+            document.querySelector("h1").innerHTML = val;
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>
